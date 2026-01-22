@@ -1,7 +1,7 @@
 import telebot
     
 # Инициализация бота с использованием его токена
-bot = telebot.TeleBot("8218486122:AAGuTb7VTRix8EDt2cSXd7nX8XvRbQ0T3gg")
+bot = telebot.TeleBot("")
 
 # Обработчик команды '/start' и '/hello'
 @bot.message_handler(commands=['start', 'hello'])
@@ -18,5 +18,4 @@ def send_heh(message):
 def on_ping(message):
     bot.reply_to(message, "Still alive and kicking!")
 
-# Запуск бота
 bot.polling()
